@@ -19,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Search for a city..."
-          className="flex-grow p-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-grow p-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black bg-white"
         />
         <button
           type="submit"
