@@ -6,8 +6,7 @@ A responsive web application that provides current weather information and a 5-d
 ## Live Demo
 
 View the live application:
-- [CodeSandbox](https://codesandbox.io/p/github/shreyaamgit/weatherdashboard)
-- [Deployed App URL] (if you've deployed it to Vercel/Netlify)
+- http://weatherdashboard-h3x6.vercel.app/
 
 ## Features
 
