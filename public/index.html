@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!-- Add a modern font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind dark mode -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "Montserrat", sans-serif;
+          @apply bg-gradient-to-br from-blue-50 to-purple-50;
+        }
+        html.dark body {
+          @apply bg-gradient-to-br from-gray-900 to-gray-800;
+        }
+      }
+
+      @layer components {
+        .weather-card {
+          @apply backdrop-blur-md shadow-lg border border-white/20 transition-all duration-300;
+        }
+        .weather-card:hover {
+          @apply transform -translate-y-1 shadow-xl;
+        }
+        .loader {
+          @apply border-4 border-blue-200 dark:border-gray-700 rounded-full w-12 h-12;
+          border-top-color: #3498db;
+          animation: spinner 1.5s linear infinite;
+        }
+        .recent-search-item {
+          @apply transition-all duration-300;
+        }
+        .recent-search-item:hover {
+          @apply transform scale-105;
+        }
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
